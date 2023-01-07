@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+
+/* BASE */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+button,
+input,
+textarea{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
 
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1,h2,h3{
+  color: rgb(251, 251, 251);
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+ cursor: pointer;
+ border: none;
+ outline: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* REUSABLE CSS CLASS */
+
+.section{
+  padding: 6rem 0 2rem;
+}
+
+.section__title{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.section__subtitle{
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4rem;
+}
+
+.section__title,
+.section__subtitle{
+  text-align: center;
+}
+
+/* LAYOUT */
+
+.container{
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* BUTTONS */
+
+.button{
+  display: inline-block;
+  background-color: #bfc3cc00;
+  color: white;
+  padding: 1.25rem 2rem;
+  border: 1px solid white;
+  border-radius: 100px;
+  font-weight: 600;
+  transition: background 2s;
+}
+
+.button:hover{
+  background-color: #9691b9;
+}
+
+.button__icon{
+  margin-left:10px ;
+}
+
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+
+}
+
+
+/* BREAKPOINTS */
+
+/* for large devices */
+@media screen and (max-width: 992px){
+  .container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .button{
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* for medium devices */
+@media screen and (max-width: 768px){
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section_subtitle{
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 576px){
+
+}
+
+/* for small devices */
+@media screen and (max-width: 350px){
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
